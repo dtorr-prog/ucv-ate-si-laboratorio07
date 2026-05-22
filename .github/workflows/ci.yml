@@ -11,6 +11,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: si_image_processing_lab/si-image-processing-lab
+
     steps:
 
       - uses: actions/checkout@v4
