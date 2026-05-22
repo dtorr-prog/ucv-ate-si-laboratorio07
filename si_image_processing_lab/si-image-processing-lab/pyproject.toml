@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "si-image-processing-lab"
+version = "0.1.0"
+description = "Laboratorio profesional de procesamiento de imágenes"
+authors = ["Diego"]
+readme = "README.md"
+packages = [{ include = "si_image_processing_lab", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+kedro = "^0.19.0"
+kedro-datasets = "^3.0.0"
+pillow = "^10.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.0"
+ruff = "^0.6.0"
+pytest-cov = "^7.0.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.kedro]
+package_name = "si_image_processing_lab"
+project_name = "si-image-processing-lab"
+kedro_init_version = "0.19.0"
+tools = []
+example_pipeline = "False"
+source_dir = "src"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+[tool.kedro_telemetry]
+project_id = "ca9f2cc3c58140589aa5de6c43d32381"
